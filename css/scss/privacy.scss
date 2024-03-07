@@ -1,0 +1,110 @@
+@charset "UTF-8";
+@import "vars";
+@import "mixin";
+
+/**
+ * ppWrap css
+ */
+
+ .titleBar h2{
+   padding-top: 8px;
+   font-size: 2rem;
+   color: $txtOffWhite;
+   font-weight: lighter;
+   letter-spacing: 4px;
+ }
+ .ppWrap{
+   font-size: 1.4rem;
+   padding-bottom: 60px;
+ }
+ .ppWrap h3{
+   font-size: 3rem;
+   text-align: center;
+ }
+
+ .ppWrap p,
+ .ppWrap dt,
+ .ppWrap dd{
+   font-size: 1.4rem;
+ }
+ .ppWrap p,
+ .ppWrap dd{
+   padding-bottom: 30px;
+ }
+ .ppWrap dt{
+   font-weight: bold;
+   padding-bottom: 5px;
+ }
+
+ .ppTable{
+   display: flex;
+   flex-wrap: wrap;
+   border-right: 1px solid #999;
+   border-bottom: 1px solid #999;
+   margin: 10px 0;
+ }
+ .ppTable dt{
+   width: 40%;
+   font-weight: normal;
+   padding: 10px;
+   border-left: 1px solid #999;
+   border-top: 1px solid #999;
+ }
+ .ppTable dd{
+    width: 60%;
+    padding: 10px;
+    border-left: 1px solid #999;
+    border-top: 1px solid #999;
+  }
+
+  .ppPolicy .txt2{
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #999;
+    margin-bottom: 30px;
+  }
+
+  .cookieDatas{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+  }
+  .cookieDatas__head{
+    width: 20%;
+    padding-bottom: 20px;
+  }
+  .cookieDatas__body{
+    width: 80%;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+  .cookieDatas__body a{
+    text-decoration: underline;
+  }
+  .cookieDatas__body a:hover{
+    color: #999;
+    text-decoration: none;
+  }
+
+  @media screen and (max-width:835px){
+    .ppWrap h3{
+      font-size: 2rem;
+    }
+
+    .cookieDatas{
+      display: block;
+      padding: 20px 0;
+    }
+    .cookieDatas__head::before{
+      content: '■ ';
+    }
+    .cookieDatas__head{
+      width: auto;
+      padding-bottom: 5px;
+    }
+    .cookieDatas__body{
+      width: auto;
+      padding-bottom: 20px;
+      padding-left: 0;
+    }
+  }

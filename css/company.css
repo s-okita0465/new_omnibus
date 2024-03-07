@@ -1,0 +1,386 @@
+@charset "UTF-8";
+
+/**
+ * company css
+ */
+body.company #message,
+body.company #vision {
+	padding-top: 90px;
+	margin-top: -90px;
+}
+.pointTitle {
+  font-size: 32px;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.companyIntro__start {
+  font-size: 3rem;
+  text-align: center;
+	margin: 60px 0 30px;
+}
+
+.companyIntro__logo {
+  padding: 30px 0 90px;
+  text-align: center;
+}
+
+.companyIntro dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 40px 0 20px;
+}
+
+.companyIntro dt {
+  width: 30%;
+  padding-bottom: 20px;
+}
+
+.companyIntro dd {
+  width: 70%;
+  padding-bottom: 20px;
+}
+
+dt.companyIntro__supbox {
+  width: auto;
+}
+
+dd.companyIntro__supbox {
+  width: 100%;
+}
+
+.companyIntro__suppliers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.companyIntro__suppliers li {
+  width: 48%;
+}
+
+.companyAccess {
+  padding: 60px 0;
+}
+
+#map iframe {
+  margin-bottom: 20px;
+}
+#map iframe {
+  width: 100%;
+  height: 400px;
+}
+
+
+.companyBits {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.companyBits .wrap-d {
+  border: 2px solid black;
+  padding: 75px;
+}
+
+.companyBits h3 {
+  padding-bottom: 65px;
+}
+
+.companyBitsBox {
+  padding-top: 65px;
+}
+
+.companyBitsBox__title {
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.companyBitsBox__title span {
+  display: block;
+  font-weight: bold;
+  font-size: 22.4px;
+  font-size: 1.4rem;
+}
+
+.companyBitsBox p {
+  font-size: 28.8px;
+  font-size: 1.8rem;
+}
+
+/* message */
+.companyMessage {
+	max-width: calc(940px + 60px);
+	padding: 0 30px;
+	margin: 0 auto 100px;
+}
+.companyMessage_image {
+	width: 36%;
+	float: right;
+	margin: 0 0 24px 24px;
+}
+.companyMessage_image img {
+	display: block;
+	width: 100%;
+}
+.companyMessage_title {
+	font-size: 22px;
+	margin-bottom: 20px;
+}
+.companyMessage_body {
+	
+}
+.companyMessage_body p:not(:last-of-type){
+	margin-bottom: 1em;
+}
+.companyMessage_nameArea {
+	display: table;
+	margin-left: auto;
+	margin-top: 1em;
+	font-size: 18px;
+	text-align: right;
+}
+
+
+/* vision & value */
+.philosophy{
+  max-width: calc(940px + 60px);
+	padding: 0 30px;
+  margin-left: auto;
+  margin-right: auto;
+	margin-bottom: 60px
+}
+.philosophy h3{
+  text-align: center;
+  margin-bottom: 60px;
+}
+.philosophy h4{
+  text-align: center;
+  margin-bottom: 60px;
+}
+.vision{
+  margin-bottom: 140px;
+}
+.value h3{
+  margin-bottom: 80px;
+}
+.valueContents{
+  border: 12px solid #FFF000;
+}
+.valueContents h4{
+  position: relative;
+  top: -34px;
+  margin-bottom: 30px;
+}
+.valueContentsBox{
+  margin: 0 56px 80px;
+  position: relative;
+  width: 60%;
+}
+.valueContentsBox h5{
+  margin-bottom: 30px;
+}
+.valueContentsBox h6{
+  margin-bottom: 15px;
+}
+.valueContentsBox:nth-child(odd){
+  margin-left: 14%;
+}
+.valueContentsBox:nth-child(even){
+  margin-left: 34%;
+}
+.valueContentsIcon{
+  position: absolute;
+  top: 0;
+  display: block;
+}
+.valueContentsBox-01 .valueContentsIcon{
+  left: -43%;
+}
+.valueContentsBox-02 .valueContentsIcon{
+  right: -18%;
+}
+.valueContentsBox-03 .valueContentsIcon{
+  left: -45%;
+}
+.valueContentsBox-04 .valueContentsIcon{
+  right: -34%;
+}
+.valueContentsBox-05 .valueContentsIcon{
+  left: -43%;
+}
+
+@media screen and (max-width: 835px) {
+  .companyIntro__logo {
+    padding: 0 50px 30px;
+  }
+  .companyAccess {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #map iframe {
+    height: 300px;
+  }
+  .companyAccess .wrap-e {
+    margin: 0;
+  }
+  
+  .companyBits {
+    margin-bottom: 30px;
+  }
+  .companyBits h3 {
+    padding-bottom: 30px;
+  }
+  .companyBitsBox {
+    padding: 40px 10px 0;
+  }
+  .companyBits .wrap-d {
+    padding: 40px 20px;
+  }
+  .companyBitsBox p {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  .companyBitsBox:nth-of-type(1) .companyBitsBox__title img {
+    height: 21px;
+    width: auto;
+  }
+  .companyBitsBox:nth-of-type(2) .companyBitsBox__title img {
+    height: 20px;
+    width: auto;
+  }
+  .companyBitsBox:nth-of-type(3) .companyBitsBox__title img {
+    height: 27px;
+    width: auto;
+  }
+  .companyBitsBox:nth-of-type(4) .companyBitsBox__title img {
+    height: 29px;
+    width: auto;
+  }
+  .companyIntro__suppliers {
+    display: block;
+  }
+  .companyIntro__suppliers li {
+    width: auto;
+  }
+	
+  /* philosophy */
+  .valueContentsBox{
+    width: 64%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .valueContentsBox:nth-child(odd){
+    margin-left: 5%;
+  }
+  .valueContentsBox:nth-child(even){
+    margin-left: 31%;
+  }
+  .valueContentsBox-02 .valueContentsIcon{
+    right: -34%;
+  }
+  .valueContentsBox-04 .valueContentsIcon{
+    right: -44%;
+  }
+}
+@media screen and (max-width: 750px) {
+
+  /* message */
+	.companyMessage_image {
+		float: none;
+		width: 100%;
+		margin: 0 0 24px;
+	}
+}
+@media screen and (max-width: 599px) {
+
+  /* philosophy */
+  .philosophy{
+    padding-top: 120px;
+    margin-top: -60px;
+  }
+  .philosophy h3,
+  .philosophy h4{
+    margin-bottom: 30px;
+  }
+  .philosophy h3 img{
+    width: auto;
+    height: 60px;
+  }
+  .vision{
+    margin-bottom: 80px;
+  }
+  .value h3{
+    margin-bottom: 60px;
+  }
+  .valueContents h4{
+    top: -46px;
+    margin-bottom: 0;
+  }
+  .valueContents h4 img{
+    width: auto;
+    height: 80px;
+  }
+  .valueContentsBox h5{
+    margin-bottom: 20px;
+  }
+  .valueContentsBox:nth-child(odd),
+  .valueContentsBox:nth-child(even){
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40px;
+    width: auto;
+  }
+  .valueContentsBox-01 .valueContentsIcon,
+  .valueContentsBox-02 .valueContentsIcon,
+  .valueContentsBox-03 .valueContentsIcon,
+  .valueContentsBox-04 .valueContentsIcon,
+  .valueContentsBox-05 .valueContentsIcon{
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .valueContentsBox-01 .valueContentsIcon{
+    width: 140px;
+  }
+  .valueContentsBox-02 .valueContentsIcon{
+    width: 140px;
+  }
+  .valueContentsBox-03 .valueContentsIcon{
+    width: 140px;
+  }
+  .valueContentsBox-04 .valueContentsIcon{
+    width: 170px;
+  }
+  .valueContentsBox-05 .valueContentsIcon{
+    width: 130px;
+  }
+  .valueContentsBox-01{
+    padding-top: 196px;
+  }
+  .valueContentsBox-02{
+    padding-top: 170px;
+  }
+  .valueContentsBox-03{
+    padding-top: 165px;
+  }
+  .valueContentsBox-04{
+    padding-top: 130px;
+  }
+  .valueContentsBox-05{
+    padding-top: 165px;
+  }
+  .valueContentsBox-05 h5 img{
+    height: 96px;
+    width: auto;
+  }
+}

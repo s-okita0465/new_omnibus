@@ -1,0 +1,600 @@
+@charset "UTF-8";
+
+/**
+ * service css
+ */
+.serviceAdd .serviceIntro__ext {
+  padding-bottom: 20px;
+}
+
+.serviceIntro__message {
+  width: 620px;
+  margin: 0 auto 60px;
+}
+
+.serviceIntro__message p {
+  font-size: 32px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.serviceIntro__message span {
+  display: block;
+  text-align: right;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+}
+
+.serviceList {
+  padding-bottom: 80px;
+}
+
+.serviceBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+	justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.serviceBox figure {
+	width: 35%;
+	max-width: 297px;
+}
+
+.serviceBox figure img {
+  display: block;
+}
+
+.serviceBox__info {
+	width: calc(100% - 35%);
+  position: relative;
+  padding: 15px 0 15px 50px;
+}
+
+.serviceBox__info h4 {
+  font-size: 35.2px;
+  font-size: 2.2rem;
+  padding-bottom: 15px;
+}
+
+.serviceBox__info p {
+  padding-right: 70px;
+  line-height: 1.5;
+}
+
+.serviceBox__arrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -14px;
+}
+
+.serviceData {
+  padding-bottom: 40px;
+}
+
+.serviceBox2 {
+  margin-bottom: 40px;
+}
+
+.serviceBox2 .wrap-d {
+  padding: 40px 80px 50px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+}
+
+.serviceBox2 h4 {
+  font-size: 40px;
+  font-size: 2.5rem;
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.serviceBox2 p {
+  margin-bottom: 30px;
+}
+
+.serviceBox2 p a {
+  text-decoration: underline;
+}
+
+.serviceBox2 p a:hover {
+  color: #2a76c8;
+  text-decoration: none;
+}
+
+.serviceBox2__btn {
+  position: relative;
+  display: inline-block;
+  background-color: #2a76c8;
+  padding: 10px 50px 10px 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+.serviceBox2__arrow {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -9px;
+}
+
+.serviceBox2__btnarrow {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: relative;
+  background-color: white;
+  display: block;
+  z-index: 1;
+  -webkit-transition: ease-out .1s;
+  transition: ease-out .1s;
+}
+
+.serviceBox2__btnarrow::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  margin-left: -8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #2a76c8;
+  display: block;
+  z-index: 2;
+  -webkit-transition: ease-in-out .2s;
+  transition: ease-in-out .2s;
+}
+
+.serviceBox2__btnarrow::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  display: block;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  z-index: 3;
+  top: 6px;
+  left: 4px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: ease-out .2s;
+  transition: ease-out .2s;
+}
+
+a:hover .serviceBox2__btnarrow::before {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+a:hover .serviceBox2__btnarrow::after {
+  border-color: #2a76c8;
+}
+
+.serviceCreative__btn {
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.serviceCreative__btn a {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  font-size: 2.5rem;
+  color: #2a76c8;
+  border: 2px solid #2a76c8;
+  border-radius: 10px;
+  padding: 25px 140px 25px 100px;
+}
+
+.serviceCreative__arrow {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  margin-top: -14px;
+}
+
+.serviceCreative__btnarrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  position: relative;
+  background-color: #2a76c8;
+  display: block;
+  z-index: 1;
+  -webkit-transition: ease-out .1s;
+  transition: ease-out .1s;
+}
+
+.serviceCreative__btnarrow::before {
+  content: '';
+  width: 26px;
+  height: 26px;
+  margin-top: -13px;
+  margin-left: -13px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  display: block;
+  z-index: 2;
+  -webkit-transition: ease-in-out .2s;
+  transition: ease-in-out .2s;
+}
+
+.serviceCreative__btnarrow::after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  display: block;
+  border-right: 1px solid #2a76c8;
+  border-bottom: 1px solid #2a76c8;
+  z-index: 3;
+  top: 9px;
+  left: 6px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: ease-out .2s;
+  transition: ease-out .2s;
+}
+
+a:hover .serviceCreative__btnarrow::before {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+a:hover .serviceCreative__btnarrow::after {
+  border-color: white;
+}
+
+.serviceTitle {
+  text-align: center;
+}
+
+.serviceCatch {
+  font-size: 32px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.ovxDesc {
+  padding: 30px 0 60px;
+}
+
+.ovxDescTitle {
+  font-size: 28.8px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.ovxDescSub {
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.ovxDesc p {
+  line-height: 1.5;
+}
+
+.ovxData {
+  padding-bottom: 80px;
+}
+
+.ovxData__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.ovxData__list li {
+  width: 337px;
+  text-align: center;
+  margin: 0 20px 80px;
+}
+
+.ovxDescContact {
+  padding: 60px 0;
+  margin-bottom: 20px;
+}
+
+.ovxDescContact a {
+  font-size: 40px;
+  font-size: 2.5rem;
+  padding: 30px 120px 30px 80px;
+}
+
+.ovxDescContact__arrow {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  margin-top: -14px;
+}
+
+.ovxDescContact__btnarrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  position: relative;
+  background-color: white;
+  display: block;
+  z-index: 1;
+  -webkit-transition: ease-out .1s;
+  transition: ease-out .1s;
+}
+
+.ovxDescContact__btnarrow::before {
+  content: '';
+  width: 26px;
+  height: 26px;
+  margin-top: -13px;
+  margin-left: -13px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #2a76c8;
+  display: block;
+  z-index: 2;
+  -webkit-transition: ease-in-out .2s;
+  transition: ease-in-out .2s;
+}
+
+.ovxDescContact__btnarrow::after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  display: block;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  z-index: 3;
+  top: 9px;
+  left: 6px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: ease-out .2s;
+  transition: ease-out .2s;
+}
+
+a:hover .ovxDescContact__btnarrow::before {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+a:hover .ovxDescContact__btnarrow::after {
+  border-color: #2a76c8;
+}
+
+.ccrDesc {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.ccrData {
+  padding-bottom: 40px;
+}
+
+.ccrData ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 60px;
+}
+
+.ccrData li {
+  width: 32%;
+  padding: 20px 10px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f4f4f4;
+  font-size: 22.4px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.ccrData__title {
+  font-size: 32px;
+  font-size: 2rem;
+  padding-bottom: 5px;
+}
+
+.ccrData__pdca {
+  padding: 60px 0 10px;
+}
+
+.ccrCenter .wrap-d {
+  padding: 60px 80px;
+  border-radius: 15px;
+}
+
+.ccrCenter h4 {
+  font-size: 48px;
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.ccrCenter p {
+  padding-bottom: 20px;
+}
+
+.ccrCenter__photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.ccrCenterInfo {
+  padding-top: 40px;
+  line-height: 1.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ccrCenterInfo__text em {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 32px;
+  font-size: 2rem;
+}
+
+.linkArea .ovxDescTitle{
+	padding-bottom: 0;
+}
+.linkArea .link{
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 835px) {
+  #add, #data, #creative {
+    margin-top: -80px;
+    padding-top: 80px;
+  }
+  .underpage h3 {
+    color: white;
+    line-height: 1;
+  }
+  .underpage h3 img {
+    height: 80px;
+    width: auto;
+  }
+  .underpage h3.serviceTitle img {
+    height: auto;
+    width: auto;
+  }
+  .serviceAdd .serviceIntro__ext {
+    padding-bottom: 30px;
+  }
+  .serviceIntro__message {
+    width: auto;
+    margin: 0;
+  }
+  .serviceBox {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .serviceBox figure,
+	.serviceBox__info {
+		width: 100%;
+	}
+
+  .serviceBox figure {
+    margin-bottom: 10px;
+  }
+  .serviceBox figure img {
+    margin: auto;
+  }
+  .serviceBox__info {
+    padding: 0;
+  }
+  .serviceBox__info h4 {
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+  .serviceBox__info p {
+    padding-right: 0;
+  }
+  .serviceBox__arrow {
+    display: none;
+  }
+  .serviceList {
+    padding-bottom: 40px;
+  }
+  .serviceBox2 .wrap-d {
+    padding: 30px 20px;
+    margin: 0 auto;
+    width: 80%;
+  }
+  .serviceCreative__btn {
+    margin: 0 30px;
+    padding-bottom: 40px;
+  }
+  .serviceCreative__btn a {
+    display: block;
+    padding: 20px;
+    text-align: left;
+  }
+  .serviceCreative__arrow {
+    right: 20px;
+  }
+  .serviceCatch {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+  .ovxDesc.wrap-e {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .ovxData__list li {
+    margin-bottom: 40px;
+  }
+  .ovxDescContact {
+    padding: 30px 0;
+  }
+  .ovxDescContact a {
+    display: block;
+    padding: 20px 0;
+  }
+  .ovxDescContact__btnarrow {
+    display: none;
+  }
+  .ccrDesc {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .ccrData ul {
+    display: block;
+    padding-bottom: 20px;
+  }
+  .ccrData li {
+    width: auto;
+    margin-bottom: 10px;
+  }
+  .ccrData__pdca {
+    padding-top: 20px;
+  }
+  .ccrCenter .wrap-d {
+    padding: 30px;
+  }
+  .ccrCenter h4 {
+    font-size: 2.6rem;
+    padding-bottom: 20px;
+    line-height: 1.2;
+  }
+  .ccrCenter__photo,
+  .ccrCenterInfo {
+    display: block;
+  }
+  .ccrCenterInfo__text em {
+    font-size: 1.8rem;
+  }
+}

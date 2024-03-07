@@ -1,0 +1,310 @@
+@charset "UTF-8";
+@import "vars";
+@import "mixin";
+
+/**
+ * company css
+ */
+
+ .pointTitle{
+   font-size: 2rem;
+   font-weight: bold;
+   padding-bottom: 20px;
+ }
+
+ .companyIntro__start{
+   font-size: 3rem;
+   text-align: center;
+ }
+ .companyIntro__logo{
+   padding: 30px 0 90px;
+  text-align: center;
+}
+.companyIntro dl{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px 0 20px;
+}
+.companyIntro dt{
+  width: 30%;
+  padding-bottom: 20px;
+}
+.companyIntro dd{
+  width: 70%;
+  padding-bottom: 20px;
+}
+dt.companyIntro__supbox{
+  width: auto;
+}
+dd.companyIntro__supbox{
+  width: 100%;
+}
+.companyIntro__suppliers{
+  display: flex;
+  justify-content: space-between;
+}
+.companyIntro__suppliers li{
+  width: 48%;
+}
+
+.companyAccess{
+  padding: 40px 0;
+}
+#map{
+  margin-bottom: 20px;
+  width: 100%;
+  height: 400px;
+}
+
+.companyMessage__ceo{
+  position: relative;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../images/company/message_01.jpg);
+  background-size: 1180px auto;
+  background-position: right top;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  padding-left: 50px;
+  margin-bottom: 80px;
+}
+.companyMessage__wbox{
+  position: relative;
+  background-color: rgba(242,242,242,.8);
+  padding: 60px;
+  width: 534px;
+  line-height: 1.7;
+}
+.companyMessage__wbox em{
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.5;
+  display: inline-block;
+  padding-bottom: 40px;
+}
+.companyMessage__person{
+  text-align: right;
+  padding-top: 40px;
+}
+.companyMessage__person span{
+  font-size: 1.8rem;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.companyMessage__coo{
+  position: relative;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../images/company/message_02.jpg);
+  background-size: 1180px auto;
+  background-position: left top;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  margin-bottom: 80px;
+}
+.companyMessage__coo .companyMessage__wbox{
+  position: relative;
+  left: 50.5%;
+}
+.companyBits{
+  margin-bottom: 60px;
+  text-align: center;
+}
+.companyBits .wrap-d{
+  border: 2px solid black;
+  padding: 75px;
+}
+.companyBits h3{
+  padding-bottom: 65px;
+}
+.companyBitsBox{
+  padding-top: 65px;
+}
+
+.companyBitsBox__title{
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.companyBitsBox__title span{
+  display: block;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.companyBitsBox p{
+  font-size: 1.8rem;
+}
+
+// 働く環境
+.envMv{
+  padding-bottom: 20px;
+  padding-top: 65px;
+}
+.envList{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 60px;
+}
+.envList li{
+  margin-bottom: 30px;
+}
+.envList p{
+  padding: 0 10px 0;
+  font-size: 1.4rem;
+}
+
+// サポート制度
+.supportList{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 60px 0;
+}
+.supportList li{
+  width: 32%;
+  padding: 30px;
+  background-color: $bgGray;
+  color: $omniblue;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+.supportList figure{
+  text-align: center;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.supportList p.supportTitle{
+  padding: 20px 0;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.supportList p{
+  font-size: 1.4rem;
+}
+
+// リクルートバナー
+.topRecruitList{
+  padding-bottom: 40px;
+}
+.topRecruitList .newsBox{
+  justify-content: space-between;
+}
+.topRecruitList .blogItem{
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width:835px){
+  .companyIntro__logo{
+    padding: 0 50px 30px;
+  }
+  .companyAccess{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #map{
+    height: 300px;
+  }
+  .companyAccess .wrap-e{
+    margin: 0;
+  }
+  .companyMessage__ceo{
+    padding: 30px;
+    background-size: 100% auto;
+    margin-bottom: 20px;
+  }
+  .companyMessage__wbox{
+    width: auto;
+    padding: 20px;
+  }
+  .companyMessage__ceo .companyMessage__wbox{
+    margin-top: 105px;
+  }
+  .companyMessage__wbox em{
+    font-size: 2.2rem;
+    padding-bottom: 20px;
+  }
+  .companyMessage__person{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .companyMessage__coo{
+    padding: 30px;
+    background-size: 100% auto;
+    margin-bottom: 20px;
+  }
+
+  .companyMessage__coo .companyMessage__wbox{
+    margin-top: 105px;
+    left: 0;
+  }
+
+  .companyBits{
+    margin-bottom: 30px;
+  }
+  .companyBits h3{
+    padding-bottom: 30px;
+  }
+  .companyBitsBox{
+    padding: 40px 10px 0;
+  }
+  .companyBits .wrap-d{
+    padding: 40px 20px;
+  }
+  .companyBitsBox p{
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  .companyBitsBox:nth-of-type(1) .companyBitsBox__title img{
+    height: 21px;
+    width: auto;
+  }
+  .companyBitsBox:nth-of-type(2) .companyBitsBox__title img{
+    height: 20px;
+    width: auto;
+  }
+  .companyBitsBox:nth-of-type(3) .companyBitsBox__title img{
+    height: 27px;
+    width: auto;
+  }
+  .companyBitsBox:nth-of-type(4) .companyBitsBox__title img{
+    height: 29px;
+    width: auto;
+  }
+
+  // 働く環境
+  .envMv{
+    padding-top: 20px;
+  }
+  .envList li{
+    width: 48%;
+  }
+
+  // サポート制度
+  .supportList{
+    display: block;
+    padding: 40px 0;
+  }
+  .supportList li{
+    width: auto;
+    padding: 20px;
+  }
+
+  //
+  .companyIntro__suppliers{
+    display: block;
+  }
+  .companyIntro__suppliers li{
+    width: auto;
+  }
+}

@@ -1,0 +1,1204 @@
+@charset "UTF-8";
+@import "vars";
+@import "mixin";
+
+/**
+ * common css
+ */
+
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Bold");
+  font-weight: bold;
+}
+
+[v-cloak]{
+  display: none;
+}
+
+//
+// Font
+//
+// @think  フォントサイズは16pxを基準に
+// @think ラインハイは150%〜200% その中間値 175% を基準に
+// @think カラーは #444444 を基準に
+//
+// @rule 原則 ゴシック体。明朝体はminchoクラスを付加して使用する。
+//
+html,body,#container{
+  height: 100%;
+}
+/*
+html{
+  background-color: $bgBlack;
+}
+*/
+body{
+  //font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-serif !important;
+  line-height: 1.75;
+  font-size: 1.6rem;
+  color: $txtBlack;
+  background-color: white;
+}
+img{
+  line-height: 1;
+}
+.mincho{
+	font-family: Georgia,游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN",HGS明朝E,メイリオ,Meiryo,serif !important;
+}
+.font-fs{
+  font-feature-settings: "palt";
+  letter-spacing: 0.7px;
+}
+a{
+  color: $txtBlack;
+  text-decoration: none;
+}
+
+
+//
+// 基礎的なパーツ
+// op   : hoverした時の透明処理
+// ofi  : イメージのフィット → こちらを使う場合は対応していないブラウザ対策で ofi.min.js を使う
+//
+.op img{
+  transition: all .2s ease;
+  -webkit-transform: translateZ(0px);
+}
+.op:hover img{
+  opacity: .7;
+}
+.ofi{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  font-family: 'object-fit: cover;object-position: center;';
+}
+.ofi-contain{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  font-family: 'object-fit:contain;object-position: center;';
+}
+
+.noimg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bgGray;
+  height: 130px;
+  border-radius: 10px;
+}
+
+// bg
+.bg-white{
+  background-color: rgba(255,255,255,1);
+}
+.bg-gray{
+  background-color: $omnigray;
+}
+
+// layout
+.alignC{
+  text-align: center;
+}
+.wrap-a{
+  width: 980px;
+  margin: auto;
+  padding: 30px 20px;
+  position: relative;
+}
+.wrap-b{
+  padding: 60px 0;
+  width: 780px;
+  margin: auto;
+}
+.wrap-c{
+  padding: 0;
+  width: 860px;
+  margin: 0 auto;
+}
+.wrap-d{
+  width: 940px;
+  margin: auto;
+}
+.wrap-e{
+  width: 780px;
+  margin: auto;
+}
+.wrap-f{
+  width: 620px;
+  margin: auto;
+}
+.wrap-g{
+  width: 500px;
+  margin: auto;
+}
+.wrap-h{
+  width: 660px;
+  margin: auto;
+}
+
+.space-a{
+  padding: 60px 0;
+}
+.space-b{
+  padding: 20px 0;
+}
+
+
+// css arrow mixin
+.btnArrow{
+  @include circleArrow();
+}
+
+// arrow
+.arrMore{
+  position: absolute;
+  display: block;
+  top: 50%;
+  margin-top: -28px;
+  right: -40px;
+  margin-right: -38px;
+  transition: .3s;
+}
+.arrMore:hover{
+  opacity: .7;
+  right: -45px;
+}
+
+// subtitle
+.subtitle{
+  text-align: center;
+  padding-bottom: 20px;
+}
+.subtitle span{
+  display: block;
+  font-size: 1.4rem;
+}
+
+.subtitle.posL{
+  text-align: left;
+}
+.subtitle.posL span{
+  display: inline-block;
+  vertical-align: baseline;
+  padding-left: 15px;
+}
+
+.pointTitle{
+  text-align: center;
+  font-size: 3rem;
+  padding-bottom: 40px;
+}
+
+// news共通クラス
+.newsBoxOuter{
+  position: relative;
+}
+.newsBox{
+  display: flex;
+}
+.newsBox .newsItem{
+  width: 28%;
+  margin-left: 4%;
+  padding-left: 4%;
+  border-left: 1px solid #ccc;
+  box-sizing: content-box;
+}
+.newsBox .newsItem:nth-child(1){
+  margin-left: 0;
+  padding-left: 0;
+  border-left: none;
+}
+.newsItem a{
+  text-decoration: none;
+  display: block;
+  color: $txtBlack;
+  transition: .3s;
+  -webkit-transform: translateZ(0px);
+}
+.newsItem a:hover{
+  background-color: #eee;
+}
+.newsItem__icon{
+  display: inline-block;
+  line-height: 0;
+  margin-right: 5px;
+}
+.newsItem__icon img{
+  vertical-align: middle;
+}
+.newsItem__time{
+  font-size: 1.4rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.newsItem h4{
+  font-size: 1.4rem;
+}
+
+.newsWrap{
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 90px 0 50px 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.newsWrapMain{
+  width: 618px;
+  margin-right: 105px;
+  font-size: 1.4rem;
+}
+.newsWrapMain .newsItem__icon{
+  position: relative;
+  top: -2px;
+}
+.newsWrapMain time{
+  display: inline-block;
+  padding-bottom: 5px;
+  vertical-align: middle;
+}
+.newsWrapMain p{
+  padding-bottom: 30px;
+}
+.newsWrapMain img{
+  max-width: 100%;
+}
+.underpage h3.newsDetail__title{
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0 0 30px;
+  color: $txtBlack;
+  line-height: 1.4;
+  border: none;
+}
+.underpage h3.newsLists__title{
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0 0 5px;
+  color: $txtBlack;
+  line-height: 1.4;
+  border: none;
+  transition: .3s;
+}
+.newsLists__more{
+  position: relative;
+  text-align: right;
+  margin-top: 15px;
+  padding: 0 20px 0 0;
+}
+.newsLists__more::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-bottom: 1px solid $txtBlack;
+  border-right: 1px solid $txtBlack;
+  transform: rotate(-45deg);
+  top: 7px;
+  right: 5px;
+}
+.newsListsItem{
+  display: block;
+  padding: 0 0 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #999;
+  transition: .3s;
+}
+.newsListsItem:hover,
+.underpage .newsListsItem:hover h3.newsLists__title{
+  color: #999;
+}
+.newsWrapMain .newsListsItem p{
+  padding-bottom: 0;
+}
+
+.newsWrapSide{
+  width: 136px;
+}
+.newsWrapSide li{
+  padding-left: 5px;
+}
+.newsWrapSide a{
+  font-size: 1.4rem;
+}
+.newsWrapSide a::before{
+  content: '-';
+  display: inline-block;
+  padding-right: 10px;
+}
+.newsWrapSide a:hover{
+  color: #999;
+}
+.newsWrapSide__title{
+  font-size: 1.8rem;
+  padding-bottom: 5px;
+}
+.newsWrapSide__parent{
+  padding-bottom: 40px;
+}
+
+.wp-pagenavi{
+  text-align: center;
+}
+.wp-pagenavi a,
+.wp-pagenavi span{
+  line-height: 1;
+  display: inline-block;
+  font-size: 1.6rem;
+  padding: 10px 13px;
+}
+.wp-pagenavi span.extend{
+  position: relative;
+  border: none;
+  top: -3px;
+}
+.wp-pagenavi a:hover,
+.wp-pagenavi span.current{
+  background-color: $omniblue;
+  border-color: $omniblue;
+  color: white;
+}
+
+// blog共通クラス
+.blogItem{
+  width: 31.5%;
+}
+.blogItem a{
+  text-decoration: none;
+  display: block;
+  color: $txtBlack;
+  transition: .3s;
+  // safari対策
+  -webkit-transform: translateZ(0px);
+}
+.blogItem a:hover{
+  opacity: .7;
+}
+.blogItem__photo{
+  max-width: 100%;
+}
+.blogItem__info{
+  padding: 0 10px;
+}
+.blogItem__time{
+  font-size: 1.4rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.blogItem h4{
+  font-size: 1.4rem;
+}
+
+.blogItem__arrow{
+  display: inline-block;
+  vertical-align: baseline;
+  position: relative;
+  top: 3px;
+  margin-left: 5px;
+  transition: .3s;
+}
+.relatedBlog{
+  padding-bottom: 60px;
+}
+.relatedBlog .newsBox{
+  justify-content: space-between;
+}
+.relatedBlog .subtitle{
+  padding: 0 0 20px;
+}
+
+// header
+header{
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100%;
+  min-height: 300px;
+  z-index: 3;
+}
+.headerBlackLayer{
+  position: absolute;
+  width: $headerWidth;
+  height: 100%;
+  background-color: #1c1c1c;
+  z-index: 8;
+}
+.headerInner{
+  position: relative;
+  width: $headerWidth;
+  height: 100%;
+  z-index: 10;
+}
+h1{
+  text-align: center;
+  padding-top: 30px;
+}
+.headerMenu{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -19px;
+  margin-top: -29px;
+  text-align: center;
+  transition: .3s;
+}
+.headerMenu__label{
+  position: relative;
+  width: 38px;
+  margin-top: 15px;
+}
+.headerMenu__menu,
+.headerMenu__close{
+  top: 0;
+  transition: all .3s;
+  display: block;
+  position: absolute;
+  line-height: 1;
+}
+.headerMenu__menu{
+  left: 2px;
+}
+.headerMenu__close{
+  top: 5px;
+  opacity: 0;
+}
+.wai-ham{
+  display: block;
+  width: 32px;
+  height: 25px;
+  margin: 0 auto 5px;
+}
+.wai-ham span{
+  height: 2px;
+  background-color: white;
+  opacity: .7;
+}
+.wai-ham span:nth-of-type(2){
+  top: 12px;
+}
+.wai-ham.active span:nth-of-type(1){
+  transform: translateY(12px) rotate(-45deg);
+  opacity: 1;
+}
+.wai-ham.active span:nth-of-type(3){
+  transform: translateY(-12px) rotate(45deg);
+  opacity: 1;
+}
+
+// menu hover
+.headerMenu:hover .wai-ham span:nth-of-type(2){
+  margin-left: 5px;
+}
+// menu active
+.headerMenu__menu.active{
+  transform: translateY(-5px);
+  opacity: 0;
+}
+.headerMenu__close.active{
+  transform: translateY(-5px);
+  opacity: 1;
+}
+
+.headerContact{
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -23px;
+}
+
+// navLayer
+.navLayer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  background-color: $omniblue;
+  z-index: 9;
+  transition: ease-in-out .5s;
+  padding-left: 100px;
+}
+.naviBlueLayer{
+  display: none;
+  background-color: $omniblue;
+}
+.navLayerInner{
+  width: 100%;
+  height: 100%;
+  padding: 90px 2% 90px 5%;
+  overflow: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+.navLayer__box{
+  min-width: 310px;
+  width: 29%;
+  margin: 0 1%;
+}
+.navLayer dl{
+  opacity: 0;
+  transition-duration: .3s;
+  transition-timing-function: ease-out;
+  margin-top: -10px;
+  margin-bottom: 40px;
+}
+.navLayer__box:nth-child(1) dl:nth-of-type(1){
+  transition-delay: $navLayerDuration;
+}
+.navLayer__box:nth-child(1) dl:nth-of-type(2){
+  transition-delay: $navLayerDuration+($navLayerDurationPlus*1);
+}
+.navLayer__box:nth-child(1) dl:nth-of-type(3){
+  transition-delay: $navLayerDuration+($navLayerDurationPlus*2);
+}
+.navLayer__box:nth-child(2) dl:nth-of-type(1){
+  transition-delay: $navLayerDuration+($navLayerDurationPlus*3);
+}
+.navLayer__box:nth-child(2) dl:nth-of-type(2){
+  transition-delay: $navLayerDuration+($navLayerDurationPlus*4);
+}
+.navLayer__box:nth-child(3) dl:nth-of-type(1){
+  transition-delay: $navLayerDuration+($navLayerDurationPlus*5);
+}
+.navLayer__box:nth-child(3) dl:nth-of-type(2){
+  transition-delay: $navLayerDuration+($navLayerDurationPlus*6);
+}
+
+.navLayer a{
+  color: $txtOffBlue;
+  text-decoration: none;
+}
+.navLayer dt{
+  padding-bottom: 20px;
+}
+.navLayer dt span,
+.navLayer dd a{
+  // safari対策
+  -webkit-transform: translateZ(0px);
+}
+.navLayer dt span{
+  font-size: 1.2rem;
+  display: inline-block;
+  margin: 0 10px 0 30px;
+}
+.navLayer__arrow{
+  transition: .3s;
+  display: inline-block;
+}
+a:hover .navLayer__arrow{
+  margin-left: 5px;
+}
+.navLayer dd{
+  padding-bottom: 10px;
+  padding-left: 30px;
+  position: relative;
+}
+.navLayer dd a{
+  transition: .3s;
+}
+.navLayer dd a::before{
+  content: '';
+  display: block;
+  position: absolute;
+  border-right: 1px solid $txtOffBlue;
+  border-bottom: 1px solid $txtOffBlue;
+  width: 8px;
+  height: 8px;
+  transform: rotate(-45deg);
+  top: 9px;
+  left: -2px;
+  transition: .3s;
+}
+.navLayer dd a:hover{
+  opacity: .7;
+}
+.navLayer dd a:hover::before{
+  left: 3px;
+}
+.navLayer dt a.navLayer__text span{
+  font-size: 1.6rem;
+  margin: 0;
+  margin-right: 15px;
+}
+.navLayer__text img{
+  vertical-align: middle;
+}
+
+// navLayer.active
+.navLayer.active{
+  transform: translateX(0);
+}
+.navLayer.active dl{
+  opacity: 1;
+  margin-top: 0;
+}
+
+// mainBox
+.mainBox{
+  width: calc(100% - 100px);
+  margin-left: 100px;
+  background-color: white;
+}
+
+// footer
+footer{
+  background-color: $bgBlack;
+  text-align: center;
+  padding: 60px 30px 30px;
+}
+.footerLogo{
+  padding-bottom: 50px;
+}
+.footerMenu{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+.footerMenu li{
+  margin: 0 20px;
+}
+.footerSns{
+  padding-bottom: 30px;
+}
+.footerCopy{
+  color: white;
+  font-size: 1rem;
+  opacity: .6;
+}
+
+// underpage
+.underpage .mv{
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+.underpage .titleBar{
+  background-color: $bgBlack;
+  height: 105px;
+  text-align: center;
+  padding-top: 30px;
+}
+.underpage .titleBar span{
+  font-size: 1.4rem;
+  color: $txtOffWhite;
+  display: block;
+}
+.underpage .mvInner{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.underpage .pagesNavi{
+  display: flex;
+  justify-content: center;
+}
+.underpage .pagesNavi div{
+  display: inline-block;
+  min-width: 34px;
+  text-align: center;
+  margin: 0 30px;
+}
+.underpage .pagesNavi a{
+  text-decoration: underline;
+}
+.underpage .pagesNavi a:hover{
+  color: $hoverBlack;
+  text-decoration: none;
+}
+
+/* btn */
+.blueArrowBtn{
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  background-color: #2a76c8;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  width: 236px;
+  font-size: 2rem;
+}
+.blueArrowBtn__out{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -9px;
+}
+.blueArrowBtn__in{
+  @include circleArrow(
+    $size: 18px,
+    $arrowwidth: 6px,
+    $incolor: $omniblue,
+    $bgcolor: white,
+    $arrowcolor: white,
+    $hovarrowcolor: $omniblue
+  );
+}
+
+/* underLink */
+.underLink{
+  display: flex;
+}
+.underLink.wrap-a{
+  padding: 30px 0;
+}
+.underLinkTitle{
+  width: 20%;
+  font-size: 2rem;
+  padding-top: 2px;
+}
+.underLinkBody{
+  width: 80%;
+}
+.underLinkBody ul{
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+.underLinkBody li{
+  border-left: 1px dashed #999;
+  display: block;
+  width: 25%;
+  margin: 5px 0;
+}
+.underLinkBody li p:first-child{
+  /*
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  */
+  //border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+a.underLinkBody__sub{
+  padding-left: 18px;
+  display: inline-block;
+  transition: .2s;
+  position: relative;
+}
+a.underLinkBody__sub::after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-right: 1px solid $txtBlack;
+  border-bottom: 1px solid $txtBlack;
+  transform: rotate(-45deg);
+  top: 10px;
+  left: 0;
+}
+.underLinkBody a:hover{
+  color: #999;
+}
+a.underLinkBody__sub:hover::after{
+  border-color: #999;
+}
+
+/* lightbox */
+// - off
+.lightbox{
+  position: fixed;
+  top: 0;
+  left: 100px;
+  width: calc(100%-100px);
+  height: 100%;
+  background-color: rgba(0,0,0,.6);
+  //background-color: rgba(255,255,255,1);
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+.lightbox-enter-active,
+.lightbox-leave-active {
+  transition: opacity .5s;
+}
+.lightbox-enter{
+  opacity: 0;
+}
+.lightbox-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.lightbox-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+}
+
+/**
+ * background retina
+ */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx){
+
+  /* any */
+  
+}
+
+/*
+* PC のみ適応させるためのclass
+*/
+.sp,
+span.sp,
+img.sp,
+a.sp {
+  display: none;
+}
+.pc {
+  display: block;
+}
+span.pc,
+img.pc,
+a.pc {
+  display: inline-block;
+}
+
+//
+// 基本ブレイクポイントは835px （iPad Pro 対応）
+// PC or スマホ&タブレット の2種に分ける
+//
+@media screen and (max-width:835px){
+  .pc,
+  span.pc,
+  img.pc,
+  a.pc{
+    display: none;
+  }
+  .sp {
+    display: block;
+  }
+  span.sp,
+  img.sp,
+  a.sp{
+    display: inline-block;
+  }
+  img{
+    max-width: 100%;
+  }
+
+  .wrap-a,
+  .wrap-c,
+  .wrap-g{
+    width: auto;
+  }
+  .wrap-b{
+    padding: 0;
+    margin: 30px;
+    width: auto;
+  }
+  .wrap-d,
+  .wrap-e,
+  .wrap-f,
+  .wrap-h{
+    width: auto;
+    margin: 0 30px;
+  }
+  
+  .space-a{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .arrMore{
+    position: static;
+    margin: 0;
+    top: auto;
+    right: auto;
+    width: 34px;
+    display: block;
+    margin: 15px auto 0;
+  }
+
+  .sp-btnMore{
+    border: 1px solid $txtBlack;
+    width: 50%;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: $bgBlack;
+    color: white;
+  }
+  
+  header{
+    width: 100%;
+    height: 80px;
+    min-height: 0;
+    background-color: $bgBlack;
+  }
+  .headerInner{
+    width: 100%;
+    text-align: left;
+  }
+
+  h1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 12px;
+    height: 100%;
+  }
+  h1 a{
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  h1 img{
+    height: 100%;
+  }
+  .headerMenu{
+    margin: 0;
+    right: 0;
+    left: auto;
+    top: 0;
+    margin-top: 27px;
+    margin-right: 20px;
+  }
+  .mvFirst{
+    margin-top: 80px;
+  }
+
+  // pagetitle
+  .spPageTitle{
+    text-align: center;
+    padding-top: 25px;
+    line-height: 1.4;
+  }
+  .spPageTitle span{
+    display: block;
+    color: $txtOffWhite;
+    font-size: 1.4rem;
+  }
+
+  .underpage .mv{
+    width: 100%;
+    height: 150px;
+  }
+
+  .underpage .pagesNavi div{
+    margin: 0 15px;
+  }
+  
+
+  // menu hover
+  .headerMenu:hover .wai-ham span:nth-of-type(2){
+    margin-left: 0;
+  }
+  .headerMenu__label{
+    line-height: 1;
+    margin-top: 12px;
+    display: none;
+  }
+  .headerBlackLayer,
+  .headerContact{
+    display: none;
+  }
+  .navLayer{
+    padding-left: 0;
+  }
+  .naviBlueLayer{
+    height: 80px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+  .navLayerInner{
+    padding: 110px 12% 60px;
+    display: block;
+  }
+  .navLayer__box{
+    width: auto;
+    min-width: auto;
+  }
+  .navLayer dl{
+    margin-bottom: 30px;
+  }
+  .navLayer dd{
+    display: none;
+  }
+  .navLayer dt{
+    padding-bottom: 0;
+  }
+  .navLayer dt span{
+    margin: 0 10px;
+  }
+  .headerSns{
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 40px;
+    opacity: 0;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+  }
+  .headerCopy{
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    opacity: 0;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+  }
+  .headerSns,
+  .headerCopy{
+    transition-delay: $navLayerDuration+($navLayerDurationPlus*7);
+  }
+  .navLayer.active .headerSns,
+  .navLayer.active .headerCopy{
+    opacity: 1;
+  }
+
+  .mainBox{
+    width: auto;
+    margin-left: 0;
+  }
+
+  .newsBox{
+    display: block;
+  }
+  .newsBox .newsItem{
+    width: auto;
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
+    padding-bottom: 10px;
+  }
+
+  .blogItem{
+    width: auto;
+  }
+  .blogItem__photo{
+    margin: auto;
+    display: block;
+  }
+  .blogItem__info{
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .footerMenu{
+    display: none;
+  }
+
+  // newsWrap
+  .newsWrap{
+    padding: 20px;
+    display: block;
+  }
+  .newsWrapMain{
+    width: auto;
+    margin-right: 0;
+  }
+  .newsWrapSide{
+    width: auto;
+  }
+  .newsWrapSide__title{
+    padding: 5px 20px;
+    background-color: $bgBlack;
+    color: white;
+  }
+  .newsWrapSide li{
+    padding: 0;
+  }
+  .newsWrapSide a{
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid $bgBlack;
+  }
+  .newsWrapSide a::before{
+    display: none;
+  }
+
+  .wp-pagenavi{
+    padding-bottom: 30px;
+  }
+  .wp-pagenavi a,
+  .wp-pagenavi span{
+    padding: 7px 10px;
+  }
+  .wp-pagenavi span.extend{
+    padding: 10px 0;
+  }
+
+  /* underLink */
+  .underLink{
+    display: block;
+  }
+  .underLink.wrap-a{
+    padding: 20px;
+  }
+  .underLinkTitle,
+  .underLinkBody{
+    width: auto;
+  }
+  .underLinkTitle{
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  .underLinkBody ul{
+    justify-content: space-between;
+  }
+  .underLinkBody li{
+    border-left: none;
+    border-top: 1px dashed #ccc;
+    padding-left: 0;
+    width: 46%;
+    padding-top: 5px;
+    margin: 5px 0;
+  }
+  .underLinkBody li p:first-child{
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .lightbox{
+    width: 100%;
+    left: 0;
+  }
+}

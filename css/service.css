@@ -1,0 +1,454 @@
+@charset "UTF-8";
+/**
+ * service css
+ */
+
+a:hover {
+	opacity: .6;
+}
+._tab,._sp {
+	display: none;
+}
+._pc {
+	display: block;
+}
+
+
+@media screen and (max-width: 835px) {
+	._pc,._sp {
+		display: none;
+	}
+	._tab {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 559px) {
+	._pc,._tab {
+		display: none;
+	}
+	._sp {
+		display: block;
+	}
+}
+
+/*service common*/
+.service__topTitle img {
+	filter: drop-shadow(0 0 4px rgba(0,0,0,0.60));
+}
+.serviceIntro {
+	max-width: 780px;
+	margin: 0 auto 130px;
+}
+.service_top .serviceIntro__ext {
+	text-align: center;
+}
+
+.serviceList {
+  display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 100px;
+}
+
+/*service top*/
+.service_top .serviceIntro {
+	margin-top: 80px;
+}
+.serviceBox {
+	width: 48.2%;
+	border: 1px solid #E6E6E6;
+	padding: 15px 15px 0 15px;
+	background: white;
+	box-shadow: 0 0 3px rgba(0,0,0,0.10);
+}
+.serviceBox:nth-of-type(-n+2) {
+  margin-bottom: 50px;
+}
+.serviceBox figure img {
+  display: block;
+}
+.serviceBox__info {
+  position: relative;
+  padding: 1em;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.serviceBox__info h4 {
+  font-size: 2rem;
+	font-weight: bold;
+}
+
+/*下部ボタン　資料請求など*/
+.toContactBtn {
+	display: flex;
+	justify-content: space-between;
+	gap: 8%;
+	margin: 130px auto 130px;
+	padding: 0 30px;
+}
+.toContactBtn a {
+	position: relative;
+	display: block;
+  font-size: 2.5rem;
+	width: 100%;
+	max-width: 475px;
+	margin: 0 auto;
+  padding: 1.3em 3em 1.3em 1em;
+	color: white;
+	background-color: #2a76c8;
+	line-height: 1.5;
+	box-shadow: 4px 4px 10px rgb(0 0 0 / 20%);
+}
+@media screen and (max-width:1059px){
+	.toContactBtn {
+		flex-direction: column;
+		gap: 50px;
+	}
+}
+.toContactBtn__circle {
+  position: absolute;
+  right: 1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.toContactBtn__arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  position: relative;
+  background-color: white;
+  display: block;
+  z-index: 1;
+  transition: ease-out .1s;
+}
+.toContactBtn__arrow::before {
+  content: '';
+  width: 26px;
+  height: 26px;
+  margin-top: -13px;
+  margin-left: -13px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #2a76c8;
+  display: block;
+  z-index: 2;
+  transition: ease-in-out .2s;
+}
+.toContactBtn__arrow::after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  display: block;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  z-index: 3;
+  top: 9px;
+  left: 6px;
+	transform: rotate(-45deg);
+	transition: ease-out .2s;
+}
+a:hover .toContactBtn__arrow::before {
+	transform: scale(0);
+}
+a:hover .toContactBtn__arrow::after {
+  border-color: #2a76c8;
+}
+
+/*news*/
+.sevice__newsArea {
+	margin-top: 100px;
+}
+
+@media screen and (max-width: 835px) {
+	.service__topTitle img {
+    height: 69px;
+    width: auto;
+	}
+}
+
+@media screen and (max-width: 559px) {
+	
+	.serviceIntro {
+		margin-bottom: 70px;
+	}
+  .service_top .serviceIntro__ext {
+		text-align: left;
+  }
+	
+	.service_top .serviceIntro {
+		margin-top: 50px;
+	}
+	
+	.serviceBox {
+		width: 100%;
+	}
+	.serviceBox:not(:last-of-type) {
+		margin-bottom: 30px!important;
+	}
+	
+	/*資料請求ボタン*/
+	.toContactBtn {
+    margin: 70px auto;
+		padding: 0;
+	}
+	.toContactBtn a {
+    font-size: 2.2rem;
+		padding: 1.3em 1em;
+	}
+	.toContactBtn__circle {
+		display: none;
+	}
+}
+
+/*service 下層 common*/
+.service_mv {
+	margin-bottom: 60px;
+}
+
+.service a._blank::after {
+    content: url(../images/common/ico_window.svg);
+    padding-left: 5px;
+}
+
+.service_title {
+	font-size: 26px;
+	font-weight: bold;
+	text-align: center;
+	margin: 2.5em 0;
+}
+
+
+.service__detail__item:not(:last-of-type) {
+	margin-bottom: 50px;
+}
+.service__detail__title {
+	font-size: 22px;
+	font-weight: bold;
+	border-bottom: 2px solid #2A76C8;
+	margin-bottom: 1.5em;
+	padding-bottom: .5em;
+}
+.service__detail__mainText {
+	max-width: 780px;
+	margin: auto;
+}
+.service__detail__flexBox {
+	display: flex;
+	flex-wrap: wrap;
+}
+.service__detail__image {
+	position: relative;
+	width: 350px;
+	margin-right: 5%;
+}
+.service__detail__text {
+	width: calc(100% - 350px - 5%);
+}
+
+.service__detail__link {
+	width: 100%;
+	max-width: 440px;
+	margin: 0 auto;
+	padding: 1em;
+	background: #1A1A1A;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 30px;
+	margin-top: 3em;
+	box-shadow: 4px 4px 10px rgb(0 0 0 / 20%);
+}
+.service__detail__link__inner {
+	position: relative;
+	padding-right: 1em;
+}
+.service__detail__link__arrow {
+	content: '';
+	position: absolute;
+	top: 47%;
+	right: -0.5em;
+	width: 12px;
+	height: 12px;
+	display: block;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	transform: rotate(-45deg) translateY(-50%);
+}
+
+@media screen and (max-width: 835px) {
+	.service__detail__image {
+    width: 48%;
+    margin-right: 4%;
+	}
+	.service__detail__text {
+    width: 48%;
+	}
+}
+@media screen and (max-width: 559px) {
+	
+	.service_title {
+    margin: 1.5em 0;
+	}
+	.service_mv {
+		margin: 0 -30px 30px;
+	}
+	.service__detail__image,
+	.service__detail__text {
+    width: 100%;
+    margin-right: 0;
+	}
+	.service__detail__image {
+		margin-bottom: 1em;
+		text-align: center;
+	}
+	.service__detail__link {
+		margin-top: 2em;
+	}
+	.service__detail__title {
+    font-size: 20px;
+    line-height: 1.5;
+	}
+}
+
+/*service programaticads 広告運用*/
+.serviceIntro__subBox {
+	margin-top: 70px;
+}
+.serviceIntro__subBox__title {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 1em;
+}
+.serviceIntro__subBox__image {
+	position: relative;
+	margin-top: 60px;
+	display: flex;
+	justify-content: space-between;
+}
+.serviceIntro__subBox__image.one {
+	justify-content: center;
+	margin-top: 35px;
+}
+.serviceIntro__subBox__image figure {
+	width: 44%;
+	max-width: 302px;
+}
+.serviceIntro__subBox__image figure:last-of-type {
+	margin-left: 20px;
+}
+.serviceIntro__subBox__image figcaption {
+	font-size: 14px;
+}
+.serviceIntro__subBox__icon {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 26%;
+	max-width: 200px;
+}
+.service_programaticades .service__detail__item_02 .service__detail__image::after {
+	content: "*弊社制作実績例";
+	position: absolute;
+	right: 0;
+	top: 100%;
+	font-size: 12px;
+}
+@media screen and (max-width: 835px) {
+	
+}
+@media screen and (max-width: 559px) {
+	.serviceIntro__subBox__image {
+		flex-flow: column;
+		align-items: center;
+    max-width: 280px;
+    margin: 30px auto 0;
+	}
+	.serviceIntro__subBox__image figure {
+    width: 100%;
+	}
+	.serviceIntro__subBox__image figure:last-of-type {
+    margin-left: 0;
+		margin-top: 30px;
+	}
+	.serviceIntro__subBox__image figcaption {
+    text-align: center;
+	}
+	.serviceIntro__subBox__icon {
+		display: none;
+	}
+	.service_programaticades .service__detail__item_02 .service__detail__image {
+		margin-bottom: 2.5em;
+	}
+}
+
+
+/*service video 動画マーケティング*/
+@media screen and (max-width: 835px) {
+	
+}
+/*service video セゾンデータ活用*/
+.service__detail__image__saison {
+	margin-top: 4em;
+}
+.service__detail__image__saison img {
+	margin: 0 auto;
+}
+.service__detail__subBox {
+	margin-top: 4em;
+}
+.service__detail__subBox__title {
+	font-size: 22px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 1.5em;
+}
+.service__detail__subBox ul {
+	display: flex;
+	justify-content: space-between;
+}
+.service__detail__subBox li {
+	width: 30%;
+	background: #F2F2F2;
+	padding: 20px 20px 30px;
+	border-radius: 12px;
+}
+.service__detail__subBox__icon {
+	text-align: center;
+}
+.service__detail__subBox__menu {
+	color: #2A76C8;
+	font-size: 22px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+
+@media screen and (max-width: 767px) {
+	.service__detail__subBox ul {
+		flex-flow: column;
+		align-items: center;
+	}
+	.service__detail__subBox li {
+		width: 100%;
+		max-width: 420px;
+		margin-bottom: 30px;
+	}
+}
+@media screen and (max-width: 559px) {
+	 .service__detail__image__saison {
+    margin-top: 2em;
+	}
+}
+
+/*service retail 店舗ビジネス支援*/
+@media screen and (max-width: 835px) {
+	
+}

@@ -1,0 +1,387 @@
+@charset "UTF-8";
+@import "vars";
+@import "mixin";
+
+/**
+ * service css
+ */
+.serviceAdd .serviceIntro__ext{
+  padding-bottom: 20px;
+}
+.serviceIntro__message{
+  width: 620px;
+  margin: 0 auto 60px;
+}
+.serviceIntro__message p{
+  font-size: 2rem;
+  text-align: center;
+}
+.serviceIntro__message span{
+  display: block;
+  text-align: right;
+  font-size: 1.2rem;
+}
+
+.serviceList{
+  padding-bottom: 80px;
+}
+.serviceBox{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.serviceBox figure img{
+  display: block;
+}
+.serviceBox__info{
+  position: relative;
+  padding: 15px 0 15px 50px;
+}
+.serviceBox__info h4{
+  font-size: 2.2rem;
+  padding-bottom: 15px;
+}
+.serviceBox__info p{
+  padding-right: 70px;
+  line-height: 1.5;
+}
+.serviceBox__arrow{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -14px;
+}
+
+.serviceData{
+  padding-bottom: 40px;
+}
+.serviceBox2{
+  margin-bottom: 40px;
+}
+.serviceBox2 .wrap-d{
+  padding: 40px 80px 50px;
+  background-color: $bgGray;
+  border-radius: 10px;
+}
+.serviceBox2 h4{
+  font-size: 2.5rem;
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+.serviceBox2 p{
+  margin-bottom: 30px;
+}
+.serviceBox2 p a{
+  text-decoration: underline;
+}
+.serviceBox2 p a:hover{
+  color: $omniblue;
+  text-decoration: none;
+}
+.serviceBox2__btn{
+  position: relative;
+  display: inline-block;
+  background-color: #2a76c8;
+  padding: 10px 50px 10px 20px;
+  border-radius: 5px;
+  color: white;
+}
+.serviceBox2__arrow{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -9px;
+}
+.serviceBox2__btnarrow{
+  @include circleArrow(
+    $size: 18px,
+    $arrowwidth: 6px,
+    $incolor: $omniblue,
+    $bgcolor: white,
+    $arrowcolor: white,
+    $hovarrowcolor: $omniblue
+  );
+}
+
+.serviceCreative__btn{
+  text-align: center;
+  padding-bottom: 80px;
+}
+.serviceCreative__btn a{
+  position: relative;
+  display: inline-block;
+  font-size: 2.5rem;
+  color: $omniblue;
+  border: 2px solid $omniblue;
+  border-radius: 10px;
+  padding: 25px 140px 25px 100px;
+}
+.serviceCreative__arrow{
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  margin-top: -14px;
+}
+.serviceCreative__btnarrow {
+  @include circleArrow(
+    $size: 28px,
+    $arrowwidth: 9px,
+    $incolor: white,
+    $bgcolor: $omniblue,
+    $arrowcolor: $omniblue
+  );
+}
+
+// service under
+.serviceTitle{
+  text-align: center;
+}
+.serviceCatch{
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+// ovx
+.ovxDesc{
+  padding: 30px 0 60px;
+}
+.ovxDescTitle{
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.ovxDescSub{
+  display: inline-block;
+  padding-bottom: 10px;
+}
+.ovxDesc p{
+  line-height: 1.5;
+}
+.ovxData{
+  padding-bottom: 80px;
+}
+.ovxData__list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.ovxData__list li{
+  width: 337px;
+  text-align: center;
+  margin: 0 20px 80px; 
+}
+.ovxDescContact{
+  padding: 60px 0;
+  margin-bottom: 20px;
+}
+.ovxDescContact a{
+  font-size: 2.5rem;
+  padding: 30px 120px 30px 80px;
+}
+.ovxDescContact__arrow{
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  margin-top: -14px;
+}
+.ovxDescContact__btnarrow {
+  @include circleArrow(
+    $size: 28px,
+    $arrowwidth: 9px,
+    $incolor: $omniblue,
+    $bgcolor: white,
+    $arrowcolor: white,
+    $hovarrowcolor: $omniblue
+  );
+}
+
+// ccr
+.ccrDesc{
+  padding: 30px 0;
+}
+.ccrData{
+  padding-bottom: 40px;
+}
+.ccrData ul{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 60px;
+}
+.ccrData li{
+  width: 32%;
+  padding: 20px 10px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: $bgGray;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+.ccrData__title{
+  font-size: 2rem;
+  padding-bottom: 5px;
+}
+.ccrData__pdca{
+  padding: 60px 0 10px;
+}
+
+.ccrCenter .wrap-d{
+  padding: 60px 80px;
+  border-radius: 15px;
+}
+.ccrCenter h4{
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 60px;
+}
+.ccrCenter p{
+  padding-bottom: 20px;
+}
+.ccrCenter__photo{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.ccrCenterInfo{
+  padding-top: 40px;
+  line-height: 1.5;
+  display: flex;
+  justify-content: space-between;
+}
+.ccrCenterInfo__text em{
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+@media screen and (max-width:835px){
+  #add,#data,#creative{
+    margin-top: -80px;
+    padding-top: 80px;
+  }
+  .underpage h3{
+    color: white;
+    line-height: 1;
+  }
+  .underpage h3 img{
+    height: 80px;
+    width: auto;
+  }
+  .underpage h3.serviceTitle img{
+    height: auto;
+    width: auto;
+  }
+  
+  .serviceAdd .serviceIntro__ext{
+    padding-bottom: 30px;
+  }
+  .serviceIntro__message{
+    width: auto;
+    margin: 0;
+  }
+  .serviceBox{
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .serviceBox figure{
+    margin-bottom: 10px;
+  }
+  .serviceBox figure img{
+    margin: auto;
+  }
+  .serviceBox__info{
+    padding: 0;
+  }
+  .serviceBox__info h4{
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+  .serviceBox__info p{
+    padding-right: 0;
+  }
+  .serviceBox__arrow{
+    display: none;
+  }
+
+  .serviceList{
+    padding-bottom: 40px;
+  }
+  .serviceBox2 .wrap-d{
+    padding: 30px 20px;
+    margin: 0 auto;
+    width: 300px;
+  }
+  .serviceCreative__btn{
+    margin: 0 30px;
+    padding-bottom: 40px;
+  }
+  .serviceCreative__btn a{
+    display: block;
+    padding: 20px;
+    text-align: left;
+  }
+  .serviceCreative__arrow{
+    right: 20px;
+  }
+
+  .serviceCatch{
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+
+  // ovx
+  .ovxDesc.wrap-e{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .ovxData__list li{
+    margin-bottom: 40px;
+  }
+  .ovxDescContact{
+    padding: 30px 0;
+  }
+  .ovxDescContact a{
+    display: block;
+    padding: 20px 0;
+  }
+  .ovxDescContact__btnarrow{
+    display: none;
+  }
+
+  // ccr
+  .ccrDesc{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .ccrData ul{
+    display: block;
+    padding-bottom: 20px;
+  }
+  .ccrData li{
+    width: auto;
+    margin-bottom: 10px;
+  }
+  .ccrData__pdca{
+    padding-top: 20px;
+  }
+  .ccrCenter .wrap-d{
+    padding: 30px;
+  }
+  .ccrCenter h4{
+    font-size: 2.6rem;
+    padding-bottom: 20px;
+    line-height: 1.2;
+  }
+  .ccrCenter__photo,
+  .ccrCenterInfo{
+    display: block;
+  }
+  .ccrCenterInfo__text em{
+    font-size: 1.8rem;
+  }
+}

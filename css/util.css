@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+
+/* ハンバーガーメニュー & クローズ */
+/*
+[ html ]
+<a class="wai-ham" href="#">
+	<span></span>
+	<span></span>
+	<span></span>
+</a>
+
+[ jquery ]
+$('.wai-ham').on('click',function(){
+	$(this).toggleClass('active');
+})
+*/
+.wai-ham,
+.wai-ham span {
+  display: inline-block;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wai-ham {
+  position: relative;
+  width: 50px;
+  height: 44px;
+}
+
+.wai-ham span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+}
+
+.wai-ham span:nth-of-type(1) {
+  top: 0;
+}
+
+.wai-ham span:nth-of-type(2) {
+  top: 20px;
+}
+
+.wai-ham span:nth-of-type(3) {
+  bottom: 0;
+}
+
+.wai-ham.active span:nth-of-type(1) {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+  transform: translateY(20px) rotate(-45deg);
+}
+
+.wai-ham.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.wai-ham.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-20px) rotate(45deg);
+  transform: translateY(-20px) rotate(45deg);
+}
+
+/* inputのデザインをフラットに */
+.wai-form-reset input {
+  border: none;
+  outline: none;
+  font-size: 22.4px;
+  font-size: 1.4rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* selectのデザインをフラットに */
+.wai-form-reset select {
+  background: white;
+  font-size: 22.4px;
+  font-size: 1.4rem;
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.wai-form-reset select::-ms-expand {
+  display: none;
+}
+
+/* 下三角括弧矢印 */
+.wai-arrow-down {
+  position: relative;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.wai-arrow-down:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+/* 右三角括弧矢印 */
+.wai-arrow-right {
+  position: relative;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.wai-arrow-right:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+}
+
+/* 下三角 */
+.wai-sankaku-down {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-top: 50px solid #000;
+}
+
+/* RadioとText */
+label.wai-radio_text {
+  cursor: pointer;
+  position: relative;
+  padding-left: 5px;
+  margin-right: 20px;
+  overflow: hidden;
+  padding-left: 20px;
+  display: inline-block;
+}
+
+label.wai-radio_text:before {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  left: 0px;
+  top: 4px;
+  content: '';
+  z-index: 3;
+}
+
+label.wai-radio_text:after {
+  content: '';
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 100%;
+  left: 2px;
+  top: 6px;
+  background-color: #D65;
+  z-index: 1;
+}
+
+label.wai-radio_text input[type="radio"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  left: -23px;
+  top: 1px;
+  margin: 0px;
+  -webkit-box-shadow: 20px -1px #FFF;
+          box-shadow: 20px -1px #FFF;
+}
+
+label.wai-radio_text input[type="radio"]:checked {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+label.wai-radio_text input[type="radio"]:focus {
+  opacity: 0.2;
+  -webkit-box-shadow: 20px -1px #FFF;
+          box-shadow: 20px -1px #FFF;
+}

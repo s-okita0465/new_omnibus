@@ -1,0 +1,271 @@
+@charset "UTF-8";
+.body-container h2 {
+    color: #000;
+}
+.col {
+    font-family: Helvetica,Trebuchet MS,sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 0;
+    max-width: 100%;
+    width: inherit;
+}
+.input {
+    border-left: none;
+    box-sizing: border-box;
+    float: none;
+    margin-left: 0;
+    max-width: 100%;
+    padding: 0 10px;
+}
+.form_control {
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.f_comt,
+.f_comb {
+    font-size: 12px;
+    padding-top: 0;
+    padding-bottom: 3px;
+    color: #ff5826;
+}
+.f_comt a {
+    color: -webkit-link;
+}
+.mwform-radio-field-text {
+    font-size: 13px;
+}
+.mw_wp_form .vertical-item .vertical-item {
+    margin: 0;
+}
+
+.policy_html {
+    padding: 10px;
+    font-size: 13px;
+    height: 150px;
+    overflow-y: auto;
+}
+.policy_check {
+    background-color: #ebe9e9;
+    text-align: center;
+}
+.submit_btn {
+    padding: 20px 0;
+    text-align: center;
+}
+.submit_button {
+    background: -webkit-linear-gradient(top, #68b12f, #50911e);
+    color: white;
+    font-weight: normal;
+    padding: 6px 20px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #396715;
+    border: 1px solid #509111;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+.mwform-checkbox-field-text {
+    font-size: 13px;
+}
+.mw_wp_form_confirm .mwform-buttons {
+    display: flex;
+    align-items: center;
+}
+.mwform-back-button {
+    width: 30%;
+    text-align: center;
+}
+.mw_wp_form_confirm .submit_btn {
+    padding: 20px 0;
+    text-align: center;
+    width: 65%;
+}
+.mw_wp_form_confirm .clr {
+    border-bottom: 1px solid #E4E4E4;
+}
+.mw_wp_form_confirm .input {
+    padding: 10px 5px;
+}
+.mw_wp_form_confirm .confirm-hidden {
+    display: none;
+}
+.contactform_send {
+    background-color: #fff;
+}
+.contactform_send_container {
+    max-width: calc(660px + 60px);
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.send_message {
+    font-size: 2.4rem;
+    font-weight: normal;
+    padding: 60px 0;
+}
+.company_logo {
+    text-align: center;
+    padding: 30px 0 90px;
+}
+.contactform_send p {
+    padding: 30px 0 90px;
+    text-align: center;
+}
+.transaction_form_control {
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.transaction {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background-color: #FAF9F5;
+}
+.transaction .container {
+    max-width: 900px;
+    margin: 0px auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.page_title h1 {
+    padding: 10px;
+    background-color: #C4D5C7;
+    text-align: center;
+    font-size: 25px;
+    color: #858A75;
+}
+.page_title h2 {
+    background-color: #fff;
+}
+.page_title h2 a {
+    color: -webkit-link;
+    text-decoration: underline;
+}
+.simulation_page_title {
+    padding: 10px;
+    background-color: #4682b4;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+}
+.page_title h2 {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: normal;
+    padding: 20px 10px;
+}
+.page_title h2 a {
+    text-decoration: underline;
+}
+.transaction_form_list {
+    padding: 0 30px;
+}
+.transaction_clr {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e4e4e4;
+}
+.transaction_clr label {
+    padding: 10px 3px 10px 10px;
+    font-size: 15px;
+    width: 25%;
+}
+.span_9 label {
+    padding: 0;
+    font-size: 13px;
+}
+.simulation_clr {
+    display: flex;
+    border-bottom: 1px solid #e4e4e4;
+}
+.simulation_clr label {
+    padding: 10px 3px 10px 10px;
+    font-size: 15px;
+    width: 25%;
+}
+.simulation_clr .span_9 {
+    width: 75%;
+    padding: 5px;
+    border-left: 3px solid #e4e4e4;
+}
+.simulation_clr .span_9 img {
+    cursor: pointer;
+    vertical-align: middle;
+    margin: 0 3px 3px 3px;
+}
+.transaction_clr .span_9 {
+    width: 75%;
+    padding: 5px;
+    border-left: 3px solid #e4e4e4;
+}
+.transaction_policy {
+    width: 66.66%;
+    margin: 25px auto;
+    border: 1px solid #999;
+}
+.transaction_policy h2 {
+    background-color: #ad4242;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+}
+.red_text {
+    color: red;
+    float: right;
+}
+
+@media screen and (max-width: 767px) {
+    .form_control {
+        width: 95%;
+    }
+    .form_control[name="phone_number"] {
+        width: initial;
+    }
+    .mw_wp_form_confirm .mwform-buttons {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .mwform-back-button {
+        width: 30%;
+        text-align: center;
+    }
+    .mw_wp_form_confirm .submit_btn {
+        padding: 20px 0;
+        text-align: center;
+        width: 65%;
+    }
+    .transaction_clr {
+        flex-direction: column;
+    }
+    .transaction_clr label {
+        width: 100%;
+    }
+    .transaction_clr .span_9 {
+        width: 100%;
+    }
+    .simulation_clr {
+        flex-direction: column;
+    }
+    .simulation_clr label {
+        width: 100%;
+    }
+    .simulation_clr .span_9 {
+        width: 100%;
+    }
+    .transaction_policy {
+        width: 100%;
+    }
+    .transaction_form_control {
+        width: 95%;
+    }
+    .transaction_policy {
+        width: 85%;
+    }
+}

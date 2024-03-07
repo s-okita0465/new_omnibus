@@ -1,0 +1,276 @@
+// リンクホバー mixin
+// @param $linkColor : color code
+@mixin link-hover(
+	$linkColor:#0000CC,
+	$hoverColor:#0000FF
+	){
+	color: $linkColor;
+	text-decoration: underline;
+	&:hover{
+		color: $hoverColor;
+		text-decoration: none;
+	}
+}
+
+// ハンバーガーメニューアイコン mixin
+// @param $lineColor : color code / rgba / etc..
+// @param $lineHeight : height value
+// @param $bottom : bottom value
+// @param $speed : transition value
+@mixin sp-ham-menu(
+	$width: 50px,
+	$height: 44px,
+	$color: #000,
+	$lineHeight: 4px,
+	$radius: 4px,
+	$angle: 20px,
+	$transition: all .4s
+){
+	display: inline-block;
+	transition: $transition;
+	box-sizing: border-box;
+	position: relative;
+	width: $width;
+	height: $height;
+
+	span{
+		display: inline-block;
+		transition: $transition;
+		box-sizing: border-box;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: $lineHeight;
+		background-color: #000;
+		border-radius: $radius;
+
+		&:nth-of-type(1){
+			top: 0;
+		}
+		&:nth-of-type(2){
+			top: $angle;
+		}
+		&:nth-of-type(3){
+			bottom: 0;
+		}
+	}
+
+	&.active span{
+		&:nth-of-type(1) {
+			-webkit-transform: translateY($angle) rotate(-45deg);
+			transform: translateY($angle) rotate(-45deg);
+		}
+		&:nth-of-type(2) {
+			opacity: 0;
+		}
+		&:nth-of-type(3) {
+			-webkit-transform: translateY(-$angle) rotate(45deg);
+			transform: translateY(-$angle) rotate(45deg);
+		}
+	}
+}
+
+// link-underline mixin
+// @param $lineColor : color code / rgba / etc..
+// @param $lineHeight : height value
+// @param $bottom : bottom value
+// @param $speed : transition value
+@mixin link-underline(
+		$lineColor: #000,
+		$lineWidth: 1,
+		$lineHeight: 2px,
+		$bottom: -6px,
+		$transition: all .2s ease
+	){
+		position: relative;
+	  display: inline-block;
+	  text-decoration: none;
+
+		&::after{
+			content: '';
+		  position: absolute;
+		  bottom: $bottom;
+		  left: 0;
+		  width: 100%;
+		  height: $lineHeight;
+		  -webkit-transform: scaleX(0);
+		  transform: scaleX(0);
+		  background-color: $lineColor;
+		  -webkit-transition: $transition;
+		  transition: $transition;
+		}
+		&:hover{
+			&::after{
+				-webkit-transform: scaleX($lineWidth);
+			  transform: scaleX($lineWidth);
+			}
+		}
+		&:active{
+			&::after{
+				-webkit-transform: scaleX($lineWidth);
+			  transform: scaleX($lineWidth);
+			}
+		}
+}
+
+// ラインラウンドボタン mixin
+// @param $width : 横幅px
+// @param $pad : パディングpx
+// @param $radius : 丸角
+// @param $color : 文字色・ボーダーカラー
+// @param $fontSize : 中の文字の大きさ
+// @param $hoverBg : hover時の背景
+@mixin line-round-btn(
+	$width: 84px,
+	$pad: 5px 0,
+	$radius: 25px,
+	$color: #FFFFFF,
+	$fontSize: 1.6rem,
+	$hoverBgColor: rgba(255,255,255,.2)
+){
+	display: block;
+	text-align: center;
+	font-size: $fontSize;
+	text-decoration: none;
+	border: 2px solid $color;
+	width: $width;
+	padding: $pad;
+	border-radius: $radius;
+	color: $color;
+	margin: 0 auto;
+	transition: all .2s;
+	font-feature-settings: "palt";
+	letter-spacing: 0.7px;
+	&:hover{
+		color: white;
+		background-color: $hoverBgColor;
+	}
+}
+
+// カラーラウンドボタン mixin
+// @param $width : 横幅px
+// @param $pad : パディングpx
+// @param $radius : 丸角
+// @param $color : 文字色・ボーダーカラー
+// @param $fontSize : 中の文字の大きさ
+// @param $hoverBg : hover時の背景
+@mixin color-round-btn(
+	$width: 84px,
+	$pad: 5px 0,
+	$radius: 25px,
+	$fontColor: #FFFFFF,
+	$borderColor: #000000,
+	$bgColor: #000000,
+	$fontSize: 1.6rem,
+	$hoverBgColor: rgba(0,0,0,.8),
+	$hoverColor: #FFFFFF,
+	$hoverBorderColor: #000000
+){
+	display: block;
+	text-align: center;
+	color: $fontColor;
+	font-size: $fontSize;
+	text-decoration: none;
+	border: 2px solid $borderColor;
+	background-color: $bgColor;
+	width: $width;
+	padding: $pad;
+	border-radius: $radius;
+	margin: 0 auto;
+	transition: all .2s;
+	font-feature-settings: "palt";
+	letter-spacing: 0.7px;
+	&:hover{
+		color: $hoverColor;
+		background-color: $hoverBgColor;
+		border-color: $hoverBorderColor;
+	}
+}
+
+// サークルアロー mixin
+// @param $size : 縦横px
+// @param $insize : 一つ上の大きさ縦横px
+// @param $arrowsize : 矢印の太さ
+// @param $arrowwidth : 矢印の長さ
+// @param $bgcolor : 一番下のカラー
+// @param $incolor : 一つ上のカラー
+// @param $arrowcolor : 矢印のカラー
+// @param $hovcolor : hover時のカラー
+// @param $hovarrowcolor : hover時の矢印カラー
+@mixin circleArrow(
+	$size:28px,
+	$insize: '',
+	$arrowsize: 1px,
+	$arrowwidth: 9px,
+	$bgcolor: black,
+	$incolor: white,
+	$arrowcolor: black,
+	$hovcolor: '',
+	$hovarrowcolor: '',
+	$parent: ''
+){
+	width: $size;
+  height: $size;
+  border-radius: 50%;
+  position: relative;
+  background-color: $bgcolor;
+  display: block;
+  z-index: 1;
+	transition: ease-out .1s;
+	
+	&::before{
+		content: '';
+		@if $insize == '' {
+			width: $size - 2px;
+			height: $size - 2px;
+			margin-top: -(($size - 2px)/2);
+			margin-left: -(($size - 2px)/2);
+		} @else {
+			width: $insize;
+			height: $insize;
+			margin-top: -($insize/2);
+			margin-left: -($insize/2);
+		}
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background-color: $incolor;
+		display: block;
+		z-index: 2;
+		transition: ease-in-out .2s;
+	}
+
+	&::after{
+		content: '';
+		position: absolute;
+		width: $arrowwidth;
+		height: $arrowwidth;
+		display: block;
+		border-right: $arrowsize solid $arrowcolor;
+		border-bottom: $arrowsize solid $arrowcolor;
+		z-index: 3;
+		top: $arrowwidth;
+		left: $arrowwidth*2/3;
+		transform: rotate(-45deg);
+		transition: ease-out .2s;
+	}
+
+	a:hover & {
+		@if $hovcolor != '' {
+			background-color: $hovcolor;
+		}
+	}
+
+	a:hover &::before{
+		transform: scale(0);
+	}
+	a:hover &::after{
+		@if $hovarrowcolor != '' {
+			border-color: $hovarrowcolor;
+		} @else {
+			border-color: $incolor;
+		}
+	}
+
+}
